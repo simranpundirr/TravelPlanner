@@ -31,6 +31,37 @@ travel planning — how data is modeled and optimized.
 - Rule-based personalization using traveler personas
 
 ---
+## Project Structure
+
+src/
+├── traveler_type.h     # Traveler personas
+├── place.h / place.cpp # Tourist location model
+├── city.h / city.cpp   # City-wise place container
+├── distance_utils.h    # Geographic distance calculation
+├── graph.h / graph.cpp # Graph representation
+├── dijkstra.h          # Shortest path algorithm
+├── kruskal.h           # Minimum spanning tree algorithm
+├── itinerary.h / .cpp  # Itinerary generation engine
+└── main.cpp            # Entry point (for testing/demo)
+
+## Documentation
+
+Detailed design and algorithm explanations are available in the
+[`docs/`](./docs) folder:
+
+- [`ARCHITECTURE.md`](./docs/ARCHITECTURE.md) – System design and data flow
+- [`ALGORITHMS.md`](./docs/ALGORITHMS.md) – Algorithms used and complexity analysis
+
+## How It Works (High Level)
+
+1. Tourist locations are modeled as `Place` objects
+2. Places are grouped into cities using the `City` abstraction
+3. Geographic distances are computed using latitude and longitude
+4. A graph is constructed with places as nodes and distances as weights
+5. Dijkstra and Kruskal algorithms optimize travel paths
+6. An itinerary engine generates a day-wise travel plan
+
+
 
 ##  Traveler Personas
 
