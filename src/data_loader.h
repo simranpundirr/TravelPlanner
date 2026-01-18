@@ -94,6 +94,99 @@ inline City buildMumbai() {
 
     return mumbai;
 }
+// Build Bangalore city with predefined places
+inline City buildBangalore() {
+    City bangalore("Bangalore");
+
+    bangalore.addPlace(Place(
+        "Cubbon Park",
+        "Kasturba Road, Bangalore",
+        "Bangalore",
+        12.9763, 77.5929,
+        "Park",
+        4.5, 2, 0,
+        {TravelerType::Relaxed, TravelerType::Budgeted}
+    ));
+
+    bangalore.addPlace(Place(
+        "Lalbagh Botanical Garden",
+        "Mavalli, Bangalore",
+        "Bangalore",
+        12.9507, 77.5848,
+        "Garden",
+        4.6, 2, 0,
+        {TravelerType::Relaxed, TravelerType::Explorer}
+    ));
+
+    bangalore.addPlace(Place(
+        "Bangalore Palace",
+        "Vasanth Nagar, Bangalore",
+        "Bangalore",
+        12.9987, 77.5921,
+        "Heritage",
+        4.4, 2, 0,
+        {TravelerType::Explorer}
+    ));
+
+    bangalore.addPlace(Place(
+        "UB City",
+        "Vittal Mallya Road, Bangalore",
+        "Bangalore",
+        12.9716, 77.5967,
+        "Luxury",
+        4.3, 1, 1,
+        {TravelerType::Luxury}
+    ));
+
+    return bangalore;
+}
+// Build Goa city with predefined places
+inline City buildGoa() {
+    City goa("Goa");
+
+    goa.addPlace(Place(
+        "Baga Beach",
+        "Baga, North Goa",
+        "Goa",
+        15.5520, 73.7517,
+        "Beach",
+        4.4, 2, 0,
+        {TravelerType::Relaxed, TravelerType::Budgeted}
+    ));
+
+    goa.addPlace(Place(
+        "Anjuna Beach",
+        "Anjuna, North Goa",
+        "Goa",
+        15.5736, 73.7408,
+        "Beach",
+        4.3, 2, 0,
+        {TravelerType::Relaxed, TravelerType::Explorer}
+    ));
+
+    goa.addPlace(Place(
+        "Basilica of Bom Jesus",
+        "Old Goa",
+        "Goa",
+        15.5009, 73.9116,
+        "Heritage",
+        4.6, 2, 0,
+        {TravelerType::Explorer}
+    ));
+
+    goa.addPlace(Place(
+        "Taj Exotica Resort",
+        "Benaulim, South Goa",
+        "Goa",
+        15.2642, 73.9281,
+        "Luxury",
+        4.7, 2, 1,
+        {TravelerType::Luxury}
+    ));
+
+    return goa;
+}
+
 
 
 #endif
