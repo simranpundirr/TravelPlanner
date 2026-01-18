@@ -4,7 +4,6 @@
 #include "city.h"
 #include "place.h"
 
-// Build Delhi city with predefined places
 inline City buildDelhi() {
     City delhi("Delhi");
 
@@ -50,5 +49,51 @@ inline City buildDelhi() {
 
     return delhi;
 }
+inline City buildMumbai() {
+    City mumbai("Mumbai");
+
+    mumbai.addPlace(Place(
+        "Gateway of India",
+        "Apollo Bandar, Colaba, Mumbai",
+        "Mumbai",
+        18.9220, 72.8347,
+        "Landmark",
+        4.6, 1, 0,
+        {TravelerType::Explorer, TravelerType::Relaxed}
+    ));
+
+    mumbai.addPlace(Place(
+        "Marine Drive",
+        "Netaji Subhash Chandra Bose Road, Mumbai",
+        "Mumbai",
+        18.9430, 72.8238,
+        "Leisure",
+        4.5, 1, 0,
+        {TravelerType::Relaxed, TravelerType::Budgeted}
+    ));
+
+    mumbai.addPlace(Place(
+        "Elephanta Caves",
+        "Elephanta Island, Mumbai Harbour",
+        "Mumbai",
+        18.9633, 72.9312,
+        "Heritage",
+        4.5, 3, 0,
+        {TravelerType::Explorer}
+    ));
+
+    mumbai.addPlace(Place(
+        "Juhu Beach",
+        "Juhu, Mumbai",
+        "Mumbai",
+        19.1075, 72.8263,
+        "Beach",
+        4.3, 2, 0,
+        {TravelerType::Relaxed, TravelerType::Budgeted}
+    ));
+
+    return mumbai;
+}
+
 
 #endif
