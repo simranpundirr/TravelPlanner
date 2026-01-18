@@ -94,7 +94,7 @@ inline City buildMumbai() {
 
     return mumbai;
 }
-// Build Bangalore city with predefined places
+
 inline City buildBangalore() {
     City bangalore("Bangalore");
 
@@ -140,7 +140,6 @@ inline City buildBangalore() {
 
     return bangalore;
 }
-// Build Goa city with predefined places
 inline City buildGoa() {
     City goa("Goa");
 
@@ -186,6 +185,21 @@ inline City buildGoa() {
 
     return goa;
 }
+inline City getCityByChoice(int choice) {
+    switch (choice) {
+        case 1:
+            return buildDelhi();
+        case 2:
+            return buildMumbai();
+        case 3:
+            return buildBangalore();
+        case 4:
+            return buildGoa();
+        default:
+            return buildDelhi();
+    }
+}
+
 
 
 
